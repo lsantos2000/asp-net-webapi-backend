@@ -1,0 +1,99 @@
+// Minimalist API
+
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.Collections.Generic;
+using System.Linq;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddEndpointsApiExplorer();
+
+var app = builder.Build();
+
+app.UseHttpsRedirection();
+
+var games = new List<GameSummaryDto>
+{
+    new GameSummaryDto(1, "Street Fighter III", "Roleplaying", 159.99M, new DateOnly(1992, 9, 30)),
+    new GameSummaryDto(2, "Final Fantasy XIV", "Roleplaying", 59.99M, new DateOnly(2010, 9, 30)),
+    new GameSummaryDto(3, "Fifa 2023", "Roleplaying", 79.99M, new DateOnly(2023, 9, 30)),
+    new GameSummaryDto(4, "The Legend of Zelda: Breath of the Wild", "Action-adventure", 59.99M, new DateOnly(2017, 3, 3))
+};
+
+// GET /games
+app.MapGet("/games", () => games);
+
+// GET /games/{id}
+app.MapGet("/games/{id}", (int id) =>
+{
+    try
+    {
+        var game = games.FirstOrDefault(g => g.Id == id);
+        return game is not null ? Results.Ok(game) : Results.NotFound();
+    }
+    catch (Exception ex)
+    {
+        return Results.Problem(ex.Message);
+    }
+});
+
+// POST /games
+app.MapPost("/games", (GameSummaryDto game) =>
+{
+    try
+    {
+        games.Add(game);
+        return Results.Created($"/games/{game.Id}", game);
+    }
+    catch (Exception ex)
+    {
+        return Results.Problem(ex.Message);
+    }
+});
+
+// PUT /games/{id}
+app.MapPut("/games/{id}", (int id, GameSummaryDto updatedGame) =>
+{
+    try
+    {
+        var game = games.FirstOrDefault(g => g.Id == id);
+        if (game is null) return Results.NotFound();
+
+        games.Remove(game);
+        games.Add(updatedGame);
+        return Results.NoContent();
+    }
+    catch (Exception ex)
+    {
+        return Results.Problem(ex.Message);
+    }
+});
+
+// DELETE /games/{id}
+app.MapDelete("/games/{id}", (int id) =>
+{
+    try
+    {
+        var game = games.FirstOrDefault(g => g.Id == id);
+        if (game is null) return Results.NotFound();
+
+        games.Remove(game);
+        return Results.NoContent();
+    }
+    catch (Exception ex)
+    {
+        return Results.Problem(ex.Message);
+    }
+});
+
+app.Run();
+
+public record class GameSummaryDto(
+    int Id,
+    string Name,
+    string Genre,
+    decimal Price,
+    DateOnly ReleaseDate
+);
