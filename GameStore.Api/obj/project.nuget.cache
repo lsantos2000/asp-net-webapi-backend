@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YC/7jyQqGtYU55D4MetvX2j18SqmLXGORS9h4TLqpfiGwgFQwg4a6/FHWNUcRTMuoGllF+mp4fojydxhqWfvSw==",
+  "dgSpecHash": "ShzpYWvALYufM2rII/uW4LqanB7xG78rdW4UYsm1pClHDC2UxRjPGza9LEzCveVk8oNNiM02KOmKlf8xtFj5KA==",
   "success": true,
-  "projectFilePath": "C:\\source\\asp-net-backend-full-course-source-code\\GameStore.Api\\GameStore.Api.csproj",
+  "projectFilePath": "C:\\source\\asp-net-webapi-backend\\GameStore.Api\\GameStore.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sebys\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\sebys\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
