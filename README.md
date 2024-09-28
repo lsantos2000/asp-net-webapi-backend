@@ -2,7 +2,7 @@
 
 GameStore is an ASP.NET Core application that manages a collection of games and genres. This project demonstrates the use of Entity Framework Core for database operations.
 
-Code based, and modified for demo purposes, on the source code of the YouTube video "ASP.NET Core Full Course For Beginners" by Julio Casal, see https://www.youtube.com/watch?v=AhAxLiGC7Pc.
+Code based, and modified for demo purposes, on the source code of the YouTube video "ASP.NET Core Full Course For Beginners" by Julio Casal at https://dotnetacademy.io, see https://www.youtube.com/watch?v=AhAxLiGC7Pc.
 
 ## Features
 
@@ -49,6 +49,17 @@ To run the GameStore API project, ensure you have the following prerequisites in
 4. Apply migrations and seed the database:
     ```sh
     dotnet tool install --global dotnet-ef
+    dotnet ef database update
+    ```
+
+    Note: the migrations are already in the Data\Migrations folder. To get them, the following commands were exected:
+
+    ```sh
+    dotnet ef add migrations InitialCreate --output-dir Data/Migrations
+    dotnet ef database update
+    dotnet ef migrations add SeedGenres --output-dir Data\Migrations
+    dotnet ef database update
+    dotnet ef migrations add SeedGames --output-dir Data\Migrations
     dotnet ef database update
     ```
 
