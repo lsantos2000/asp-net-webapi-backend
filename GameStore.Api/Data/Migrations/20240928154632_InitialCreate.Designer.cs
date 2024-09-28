@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameStore.Api.Data.Migrations
 {
     [DbContext(typeof(GameStoreContext))]
-    [Migration("20240928153130_SeedExtraGames")]
-    partial class SeedExtraGames
+    [Migration("20240928154632_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -89,7 +89,7 @@ namespace GameStore.Api.Data.Migrations
                         new
                         {
                             Id = 6,
-                            GenreId = 6,
+                            GenreId = 1,
                             Name = "The Legend of Zelda",
                             Price = 59.99m,
                             ReleaseDate = new DateOnly(1986, 2, 21)
@@ -105,7 +105,7 @@ namespace GameStore.Api.Data.Migrations
                         new
                         {
                             Id = 8,
-                            GenreId = 7,
+                            GenreId = 1,
                             Name = "Halo: Combat Evolved",
                             Price = 39.99m,
                             ReleaseDate = new DateOnly(2001, 11, 15)
@@ -121,7 +121,7 @@ namespace GameStore.Api.Data.Migrations
                         new
                         {
                             Id = 10,
-                            GenreId = 8,
+                            GenreId = 3,
                             Name = "Minecraft",
                             Price = 26.95m,
                             ReleaseDate = new DateOnly(2011, 11, 18)
@@ -129,7 +129,7 @@ namespace GameStore.Api.Data.Migrations
                         new
                         {
                             Id = 11,
-                            GenreId = 9,
+                            GenreId = 1,
                             Name = "Overwatch",
                             Price = 39.99m,
                             ReleaseDate = new DateOnly(2016, 5, 24)
@@ -137,7 +137,7 @@ namespace GameStore.Api.Data.Migrations
                         new
                         {
                             Id = 12,
-                            GenreId = 10,
+                            GenreId = 4,
                             Name = "Red Dead Redemption 2",
                             Price = 59.99m,
                             ReleaseDate = new DateOnly(2018, 10, 26)
@@ -153,7 +153,7 @@ namespace GameStore.Api.Data.Migrations
                         new
                         {
                             Id = 14,
-                            GenreId = 11,
+                            GenreId = 5,
                             Name = "The Sims 4",
                             Price = 39.99m,
                             ReleaseDate = new DateOnly(2014, 9, 2)
@@ -161,7 +161,7 @@ namespace GameStore.Api.Data.Migrations
                         new
                         {
                             Id = 15,
-                            GenreId = 9,
+                            GenreId = 1,
                             Name = "Fortnite",
                             Price = 0.00m,
                             ReleaseDate = new DateOnly(2017, 7, 25)
@@ -169,7 +169,7 @@ namespace GameStore.Api.Data.Migrations
                         new
                         {
                             Id = 16,
-                            GenreId = 7,
+                            GenreId = 1,
                             Name = "Call of Duty: Modern Warfare",
                             Price = 59.99m,
                             ReleaseDate = new DateOnly(2019, 10, 25)
@@ -185,7 +185,7 @@ namespace GameStore.Api.Data.Migrations
                         new
                         {
                             Id = 18,
-                            GenreId = 11,
+                            GenreId = 5,
                             Name = "Animal Crossing: New Horizons",
                             Price = 59.99m,
                             ReleaseDate = new DateOnly(2020, 3, 20)
@@ -193,7 +193,7 @@ namespace GameStore.Api.Data.Migrations
                         new
                         {
                             Id = 19,
-                            GenreId = 7,
+                            GenreId = 1,
                             Name = "Doom Eternal",
                             Price = 59.99m,
                             ReleaseDate = new DateOnly(2020, 3, 20)
@@ -201,7 +201,7 @@ namespace GameStore.Api.Data.Migrations
                         new
                         {
                             Id = 20,
-                            GenreId = 12,
+                            GenreId = 5,
                             Name = "Among Us",
                             Price = 5.00m,
                             ReleaseDate = new DateOnly(2018, 6, 15)
