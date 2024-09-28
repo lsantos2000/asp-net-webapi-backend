@@ -1,5 +1,4 @@
 ﻿using GameStore.Api.Data;
-using GameStore.Api.Entities;
 using GameStore.Api.Mapping;
 using Microsoft.EntityFrameworkCore;
 
