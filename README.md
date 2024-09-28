@@ -1,8 +1,10 @@
-# GameStore
+# GameStore - Backend
 
-GameStore is an ASP.NET Core application that manages a collection of games and genres. This project demonstrates the use of Entity Framework Core for database operations.
+GameStore Backend is an ASP.NET Core application that manages a collection of games and genres. This project demonstrates the use of Entity Framework Core for database operations.
 
-Code based, and modified for demo purposes, on the source code of the YouTube video "ASP.NET Core Full Course For Beginners" by Julio Casal at https://dotnetacademy.io, see https://www.youtube.com/watch?v=AhAxLiGC7Pc.
+An optional, corresponding frontend (using Blazor) is available at https://github.com/lsantos2000/asp-net-webapi-blazor-frontend.git 
+
+Code based, and modified for demo purposes, on the source code of the YouTube video "ASP.NET Core Full Course For Beginners" by Julio Casal at https://dotnetacademy.io, see https://www.youtube.com/watch?v=AhAxLiGC7Pc and https://www.youtube.com/watch?v=RBVIclt4sOo .
 
 ## Features
 
@@ -30,7 +32,7 @@ To run the GameStore API project, ensure you have the following prerequisites in
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/lsantos2000/GameStore.git
+    git clone https://github.com/lsantos2000/sap-net-webapi-backend.git
     cd GameStore
     ```
 
