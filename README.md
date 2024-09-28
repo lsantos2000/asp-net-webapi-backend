@@ -52,15 +52,14 @@ To run the GameStore API project, ensure you have the following prerequisites in
     dotnet ef database update
     ```
 
-    Note: the migrations are already in the Data\Migrations folder. To get them, the following commands were exected:
+    Note: 
+     - the code is prrepared to apply all migrations at starup, if does not find a database or they are not applied yet.
+     - the migrations are already in the Data\Migrations folder. To get them, these commands were executed:
 
     ```sh
     dotnet ef add migrations InitialCreate --output-dir Data/Migrations
-    dotnet ef database update
-    dotnet ef migrations add SeedGenres --output-dir Data\Migrations
-    dotnet ef database update
     dotnet ef migrations add SeedGames --output-dir Data\Migrations
-    dotnet ef database update
+    dotnet ef migrations add SeedExtraGames --output-dir Data\Migrations
     ```
 
 5. Run the application:
