@@ -2,7 +2,7 @@
 
 GameStore Backend is an ASP.NET Core application that manages a collection of games and genres. This project demonstrates the use of Entity Framework Core for database operations.
 
-An optional, corresponding frontend (using Blazor) is available at https://github.com/lsantos2000/asp-net-webapi-blazor-frontend.git
+An optional, corresponding frontend (using Blazor) is available at https://github.com/lsantos2000/asp-net-webapi-blazor-frontend
 
 ## Features
 
@@ -112,6 +112,6 @@ This project is licensed under the MIT License.
 
 Code based, and modified for demo purposes, on the source code of the YouTube video "ASP.NET Core Full Course For Beginners" by Julio Casal.
 
-Check out Julio at https://dotnetacademy.io.
-Watch the video at https://www.youtube.com/watch?v=AhAxLiGC7Pc and https://www.youtube.com/watch?v=RBVIclt4sOo .
+Check out Julio at https://dotnetacademy.io
+Watch the video at https://www.youtube.com/watch?v=AhAxLiGC7Pc and https://www.youtube.com/watch?v=RBVIclt4sOo
 I encourage you to visit the above links and follow the original author.
