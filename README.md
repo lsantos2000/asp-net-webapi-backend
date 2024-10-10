@@ -4,6 +4,18 @@ GameStore Backend is an ASP.NET Core application that manages a collection of ga
 
 An optional, corresponding frontend (using Blazor) is available at https://github.com/lsantos2000/asp-net-webapi-blazor-frontend
 
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Database Seeding](#database-seeding)
+- [More details](#more-details)
+- [License](#license)
+
 ## Features
 
 - Manage games and genres
@@ -30,48 +42,48 @@ To run the GameStore API project, ensure you have the following prerequisites in
 
 1. Clone the repository:
 
-   ```sh
-   git clone https://github.com/lsantos2000/sap-net-webapi-backend.git
-   cd GameStore
-   ```
+```sh
+git clone https://github.com/lsantos2000/asp-net-webapi-backend.git
+```
 
 2. Navigate to the project directory:
 
-   ```sh
-   cd GameStore
-   ```
+```sh
+cd GameStore
+```
 
 3. The demo uses SQLite, if you use a different provider, update the database connection string in `appsettings.json`:
 
-   ```json
-   "ConnectionStrings": {
-       "DefaultConnection": "Server=your_server;Database=GameStoreDb;User Id=your_user;Password=your_password;"
-   }
-   ```
+```json
+"ConnectionStrings": {
+    "DefaultConnection": "Server=your_server;Database=GameStoreDb;User Id=your_user;Password=your_password;"
+}
+```
 
 4. Apply migrations and seed the database:
 
-   ```sh
-   dotnet tool install --global dotnet-ef
-   dotnet ef database update
-   ```
+```sh
+dotnet tool install --global dotnet-ef
+dotnet ef database update
+```
 
-   Note:
+Note:
 
-   - the code is prrepared to apply all migrations at startup, if does not find a database or they are not applied yet.
-   - the migrations are already in the Data\Migrations folder. To get them, these commands were executed:
+- the code is prrepared to apply all migrations at startup, if does not find a database or they are not applied yet.
+- the migrations are already in the Data\Migrations folder. To get them, these commands were executed:
 
-   ```sh
-   dotnet ef migrations add InitialCreate --output-dir Data\Migrations
-   dotnet ef database update
-   ```
+```sh
+dotnet ef migrations add InitialCreate --output-dir Data\Migrations
+dotnet ef database update
+```
 
-5. Run the application:
+5. Restore packages, build and run the application:
 
-   ```sh
-   dotnet restore
-   dotnet run
-   ```
+```sh
+dotnet restore
+dotnet build
+dotnet run
+```
 
 This will start the API server, and you can access it at http://localhost:5000 by default.
 
@@ -101,10 +113,6 @@ The OnModelCreating method is overridden to configure the model using the ModelB
 For the Genre entity, five records are seeded with predefined Id and Name values. Similarly, for the Game entity, five records are seeded with predefined values for Id, Title, GenreId, Name, Price, and ReleaseDate. The ReleaseDate is specified using the DateOnly struct, which represents a date without a time component.
 
 Overall, this code sets up the database context for a game store application, defines the Game and Genre entities, and seeds initial data into the database tables. This setup is essential for the application to interact with the database and perform operations on the Game and Genre entities.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
 
 ### License
 

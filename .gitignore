@@ -1,0 +1,11 @@
+GameStore.Api/GameStore.db-shm
+GameStore.Api/GameStore.db-wal
+GameStore.Api/bin/Debug/net8.0/GameStore.Api.dll
+GameStore.Api/bin/Debug/net8.0/GameStore.Api.exe
+GameStore.Api/bin/Debug/net8.0/GameStore.Api.pdb
+GameStore.Api/obj/Debug/net8.0/apphost.exe
+GameStore.Api/obj/Debug/net8.0/GameStore.Api.dll
+GameStore.Api/obj/Debug/net8.0/GameStore.Api.pdb
+GameStore.Api/obj/Debug/net8.0/GameStore.Api.sourcelink.json
+GameStore.Api/obj/Debug/net8.0/ref/GameStore.Api.dll
+GameStore.Api/obj/Debug/net8.0/refint/GameStore.Api.dll
